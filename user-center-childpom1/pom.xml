@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.atguigu.maven</groupId>
+    <artifactId>user-center-parentpom</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.atguigu.maven</groupId>
+  <artifactId>user-center-childpom1</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>user-center-childpom1</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+<!--  父pom指明依赖后，子工程还是需要依赖，只是可以不写版本号  -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.atguigu.maven</groupId>
+      <artifactId>user-center-java</artifactId>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
